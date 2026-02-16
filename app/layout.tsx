@@ -6,8 +6,45 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Parole de Chercheurs - Le magazine de l'analyse scientifique et sociétale",
-  description: "Décrypter le monde par la science. Analyses, tribunes et regards d'experts sur les enjeux contemporains.",
+  metadataBase: new URL('https://paroledechercheurs.net'),
+  title: {
+    default: "Parole de Chercheurs - Le magazine de l'analyse scientifique",
+    template: "%s | Parole de Chercheurs",
+  },
+  description: "Décrypter le monde par la science. Analyses, tribunes et regards d'experts sur les enjeux contemporains (Santé, Tech, Société).",
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    url: 'https://paroledechercheurs.net',
+    siteName: 'Parole de Chercheurs',
+    images: [
+      {
+        url: '/images/og-image.jpg', // Ensure this image exists or use a default
+        width: 1200,
+        height: 630,
+        alt: 'Parole de Chercheurs',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@PdeChercheurs', // Fictional handle
+    creator: '@PdeChercheurs',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: './',
+  },
 };
 
 import Header from "@/components/layout/Header";

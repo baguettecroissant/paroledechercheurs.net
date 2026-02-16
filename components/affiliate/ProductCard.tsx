@@ -14,7 +14,7 @@ type ProductCardProps = {
     badge?: string;
 };
 
-const ProductCard = ({ name, image, rating, price, features, pros, cons, link, badge }: ProductCardProps) => {
+const ProductCard = ({ name, image, rating, price, features = [], pros = [], cons = [], link, badge }: ProductCardProps) => {
     return (
         <div className="bg-white rounded-xl shadow-lg border border-stone-200 overflow-hidden my-8 not-prose">
             {badge && (

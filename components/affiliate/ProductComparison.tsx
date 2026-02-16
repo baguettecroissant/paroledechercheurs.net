@@ -10,7 +10,11 @@ type ComparisonTableProps = {
     }[];
 };
 
-const ProductComparison = ({ products }: ComparisonTableProps) => {
+const ProductComparison = ({ products = [] }: ComparisonTableProps) => {
+    if (!products || products.length === 0) {
+        console.warn('ProductComparison: No products provided');
+        return null;
+    }
     return (
         <div className="overflow-x-auto my-8 border border-stone-200 rounded-xl shadow-sm not-prose">
             <table className="w-full text-sm text-left text-stone-600 bg-white">

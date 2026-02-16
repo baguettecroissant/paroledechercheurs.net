@@ -41,7 +41,7 @@ export function getPostBySlug(category: string, slug: string): Post {
 }
 
 export function getAllPosts(): Post[] {
-    const categories = ['societe', 'sciences', 'outils', 'tech'];
+    const categories = ['societe', 'sciences', 'outils', 'tech', 'sante'];
     let allPosts: Post[] = [];
 
     categories.forEach((category) => {
@@ -57,4 +57,16 @@ export function getPostsByCategory(category: string): Post[] {
     const slugs = getPostSlugs(category);
     const posts = slugs.map((slug) => getPostBySlug(category, slug));
     return posts.sort((post1, post2) => (post1.frontMatter.date > post2.frontMatter.date ? -1 : 1));
+}
+
+export function getFeaturedPosts(): Post[] {
+    const allPosts = getAllPosts();
+    return allPosts.filter(post => post.frontMatter.featured).sort((a, b) => (a.frontMatter.date > b.frontMatter.date ? -1 : 1));
+}
+
+export function getRecentPosts(count: number): Post[] {
+    const allPosts = getAllPosts();
+    // Filter out featured posts to avoid duplication if needed, or just return recent
+    const sorted = allPosts.sort((a, b) => (a.frontMatter.date > b.frontMatter.date ? -1 : 1));
+    return sorted.slice(0, count);
 }
