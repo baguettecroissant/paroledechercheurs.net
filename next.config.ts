@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/spip.php/:slug*',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
