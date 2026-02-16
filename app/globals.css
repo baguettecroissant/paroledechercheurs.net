@@ -1,8 +1,17 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+
+  --color-accent-primary: #c2410c;
+  /* orange-700 - Burnt Orange */
+  --color-accent-secondary: #9a3412;
+  /* orange-800 */
+  --color-accent-light: #ffedd5;
+  /* orange-100 */
 }
 
 @source "../components";

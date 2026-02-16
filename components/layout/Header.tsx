@@ -9,16 +9,16 @@ const Header = () => {
                     <Menu size={24} />
                 </button>
 
-                <Link href="/" className="text-2xl lg:text-3xl font-serif font-bold tracking-tight text-stone-900">
-                    Parole de Chercheurs<span className="text-blue-900">.net</span>
+                <Link href="/" className="text-xl md:text-2xl font-serif font-black tracking-tight text-stone-900">
+                    ParoleDe<span className="text-orange-700">Chercheurs</span><span className="text-orange-700">.net</span>
                 </Link>
 
                 <nav className="hidden lg:flex items-center gap-8 font-sans font-medium text-stone-600 text-sm">
-                    <Link href="#" className="hover:text-blue-900 transition-colors">SCIENCES</Link>
-                    <Link href="#" className="hover:text-blue-900 transition-colors">SOCIÉTÉ</Link>
-                    <Link href="#" className="hover:text-blue-900 transition-colors">TECH</Link>
-                    <Link href="#" className="hover:text-blue-900 transition-colors">SANTÉ</Link>
-                    <Link href="#" className="hover:text-blue-900 transition-colors">À PROPOS</Link>
+                    <Link href="/sciences" className="hover:text-orange-700 transition-colors">SCIENCES</Link>
+                    <Link href="/societe" className="hover:text-orange-700 transition-colors">SOCIÉTÉ</Link>
+                    <Link href="/tech" className="hover:text-orange-700 transition-colors">TECH</Link>
+                    <Link href="/sante" className="hover:text-orange-700 transition-colors">SANTÉ</Link>
+                    <Link href="/outils" className="hover:text-orange-700 transition-colors">OUTILS</Link>
                 </nav>
 
                 <div className="flex items-center gap-4">

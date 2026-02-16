@@ -17,15 +17,17 @@ const Hero = () => {
             </div>
 
             <div className="container mx-auto px-4 relative z-10 text-center">
-                <span className="inline-block py-1 px-3 rounded-full bg-blue-900/50 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6 backdrop-blur-sm">
-                    Édition Numérique
-                </span>
-                <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-                    Décrypter le monde <br className="hidden md:block" /> par la science
+                <div className="inline-block mb-6 px-4 py-1 border border-white/30 rounded-full backdrop-blur-sm">
+                    <span className="text-sm font-medium tracking-widest uppercase text-white/90">Think Tank Digital</span>
+                </div>
+
+                <h1 className="text-5xl md:text-7xl font-serif font-black mb-8 leading-tight tracking-tight">
+                    Le Savoir n'est pas <br />
+                    <span className="text-orange-500">une Opinion.</span>
                 </h1>
-                <p className="text-lg lg:text-xl text-stone-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                    Analyses, tribunes et regards d'experts sur les enjeux contemporains.
-                    Une lecture rigoureuse pour comprendre les défis de demain.
+
+                <p className="text-xl md:text-2xl text-stone-300 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                    Analyses d'experts pour un monde complexe.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link href="#articles" className="px-8 py-3 bg-white text-stone-900 font-medium rounded hover:bg-stone-100 transition-colors shadow-lg shadow-white/10">
