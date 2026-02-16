@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+@source "../components";
+@source "../app";
+
+/* Custom utility adjustments if needed, though they should be handled by classes */
