@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -58,6 +59,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-stone-50 text-stone-900 flex flex-col min-h-screen`}>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="2b411524-b8eb-42bf-8746-d27f92fcc642"
+        />
         <Header />
         <main className="flex-grow">
           {children}
