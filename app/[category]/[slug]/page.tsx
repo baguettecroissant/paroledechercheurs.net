@@ -55,6 +55,7 @@ const mdxComponents = {
     KeyTakeaways,
     Glossary,
     FAQ,
+    Citation,
 };
 
 export default async function ArticlePage({ params }: Props) {
